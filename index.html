@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語部代課暨特休手冊 ─ 耶加教育機構</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#f5f4f1;font-family:-apple-system,'Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei',sans-serif;font-size:15px;line-height:1.6;color:#1a1a18}
+:root{
+  --bg:#ffffff;--bg2:#f5f4f1;--bg3:#eceae6;
+  --text:#1a1a18;--text2:#5f5e5a;--text3:#8a8880;
+  --border:rgba(0,0,0,0.11);--border2:rgba(0,0,0,0.2);
+  --accent:#334E6E;--accent-light:#E3EAF2;
+  --r-md:8px;--r-lg:12px;
+}
+@media(prefers-color-scheme:dark){
+  body{background:#18181a;color:#e8e6de}
+  :root{
+    --bg:#1e1e1c;--bg2:#27272a;--bg3:#323230;
+    --text:#e8e6de;--text2:#a0a09a;--text3:#68686a;
+    --border:rgba(255,255,255,0.09);--border2:rgba(255,255,255,0.18);
+  }
+  .badge-teal{background:#04342C!important;color:#9FE1CB!important}
+  .badge-amber{background:#412402!important;color:#FAC775!important}
+  .badge-red{background:#501313!important;color:#F09595!important}
+  .a-teal{background:#04342C!important;color:#9FE1CB!important;border-color:#085041!important}
+  .a-amber{background:#412402!important;color:#FAC775!important;border-color:#633806!important}
+  .a-blue{background:#0C2340!important;color:#B5D4F4!important;border-color:#185FA5!important}
+  .guide-table th{background:#1E3A54!important}
+  .sec-header{background:#1E3A54!important}
+  .dl-icon{background:#1E3A54!important}
+}
+
+/* Layout */
+.page-header{background:var(--accent);color:#fff;padding:16px 20px;position:sticky;top:0;z-index:100}
+.page-header h1{font-size:16px;font-weight:500;margin:0 0 1px}
+.page-header p{font-size:11px;margin:0;opacity:.75}
+.container{max-width:720px;margin:0 auto;padding:18px 14px 60px}
+
+/* Tabs */
+.tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:7px 14px;border-radius:20px;border:0.5px solid var(--border2);background:transparent;color:var(--text2);font-size:12.5px;font-weight:500;cursor:pointer;transition:all .15s}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.view{display:none}.view.active{display:block}
+
+/* Card */
+.card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:16px 18px;margin-bottom:12px}
+.sec-header{background:var(--accent);color:#fff;font-size:12px;font-weight:500;letter-spacing:.08em;padding:7px 14px;border-radius:6px;margin:0 0 14px}
+.card-title{font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.07em;margin:0 0 12px}
+h3{font-size:14px;font-weight:500;margin:0 0 10px;color:var(--text)}
+p{margin:0 0 6px;font-size:13px;line-height:1.6;color:var(--text2)}
+
+/* Steps */
+.steps{list-style:none;padding:0;margin:0}
+.steps li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:0.5px solid var(--border);font-size:13px;line-height:1.6;color:var(--text)}
+.steps li:last-child{border-bottom:none}
+.sn{min-width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;background:#E3EAF2;color:#1E3A54;margin-top:1px;flex-shrink:0}
+
+/* Badges */
+.badge{display:inline-block;font-size:11px;font-weight:500;padding:2px 9px;border-radius:20px;margin-right:4px}
+.badge-teal{background:#E1F5EE;color:#085041}
+.badge-amber{background:#FAEEDA;color:#633806}
+.badge-red{background:#FCEBEB;color:#791F1F}
+
+/* Branch */
+.branch{background:var(--bg2);border-radius:var(--r-md);border:0.5px solid var(--border);padding:10px 14px;margin-bottom:7px;font-size:13px;line-height:1.75;color:var(--text)}
+.bh{font-weight:500;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+
+/* Alert */
+.alert{border-radius:var(--r-md);padding:10px 14px;font-size:13px;line-height:1.6;margin-bottom:12px;display:flex;gap:8px;align-items:flex-start}
+.a-teal{background:#E1F5EE;color:#085041;border:0.5px solid #9FE1CB}
+.a-amber{background:#FAEEDA;color:#633806;border:0.5px solid #FAC775}
+.a-blue{background:#E3EAF2;color:#1E3A54;border:0.5px solid #9BB5CE}
+
+/* Decision */
+.decision{border-left:3px solid var(--border2);padding-left:14px;margin:0 0 12px}
+.dl{font-size:12px;font-weight:500;color:var(--text2);margin-bottom:8px}
+.divider{border:none;border-top:0.5px solid var(--border);margin:14px 0}
+
+/* Sub list */
+.sub-list{list-style:none;padding:0;margin:6px 0 0}
+.sub-list li{display:flex;align-items:flex-start;gap:6px;font-size:13px;line-height:1.7;padding:2px 0;color:var(--text2)}
+.sub-list li::before{content:'→';color:var(--accent);flex-shrink:0;margin-top:1px}
+
+/* Template */
+.tmpl-label{font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.tmpl-wrap{position:relative;margin-bottom:14px}
+.tmpl{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-md);padding:12px 14px;font-size:13px;line-height:1.75;white-space:pre-wrap;font-family:inherit;margin:0;color:var(--text)}
+.copy-btn{position:absolute;top:8px;right:8px;font-size:11px;padding:3px 10px;border-radius:4px;border:0.5px solid var(--border2);background:var(--bg);color:var(--text2);cursor:pointer}
+.copy-btn:hover{color:var(--text)}
+
+/* Checklist */
+.checklist{list-style:none;padding:0;margin:0}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:13px;line-height:1.6;border-bottom:0.5px solid var(--border);cursor:pointer;color:var(--text)}
+.checklist li:last-child{border-bottom:none}
+.checklist li.done span:last-child{text-decoration:line-through;color:var(--text3)}
+.chk{min-width:18px;height:18px;border-radius:5px;border:0.5px solid var(--border2);display:flex;align-items:center;justify-content:center;background:var(--bg);margin-top:1px;flex-shrink:0;transition:all .1s}
+.chk.on{background:#1D9E75;border-color:#1D9E75}
+.chk.on::after{content:'✓';color:#fff;font-size:11px}
+
+/* Guide table */
+.guide-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.guide-table th{background:var(--accent);color:#fff;padding:8px 10px;font-weight:500;font-size:12px;text-align:left}
+.guide-table td{padding:8px 10px;border-bottom:0.5px solid var(--border);line-height:1.5;vertical-align:top;color:var(--text)}
+.guide-table tr:last-child td{border-bottom:none}
+.guide-table tr:hover td{background:var(--bg2)}
+.ok{color:#0F6E56;font-weight:500}
+.warn{color:#633806;font-weight:500}
+
+/* Quote */
+.quote-block{border-left:3px solid var(--accent);padding:8px 14px;background:var(--bg2);border-radius:0 var(--r-md) var(--r-md) 0;font-size:13px;line-height:1.7;margin-bottom:12px;color:var(--text2)}
+.quote-block strong{color:var(--text)}
+
+/* Download */
+.dl-section{display:flex;flex-direction:column;gap:12px}
+.dl-card{display:flex;align-items:center;gap:14px;background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;text-decoration:none;color:var(--text);transition:border-color .15s}
+.dl-card:hover{border-color:var(--border2)}
+.dl-icon{width:40px;height:40px;border-radius:var(--r-md);background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;color:#fff}
+.dl-info{flex:1}
+.dl-title{font-size:14px;font-weight:500;margin:0 0 2px;color:var(--text)}
+.dl-desc{font-size:12px;color:var(--text2);margin:0}
+.dl-arrow{color:var(--text3);font-size:18px}
+.dl-tag{display:inline-block;font-size:11px;font-weight:500;background:#FAEEDA;color:#633806;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle}
+
+/* Form fields */
+.field{margin-bottom:13px}
+.field label{display:block;font-size:12px;font-weight:500;color:var(--text2);margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;padding:8px 10px;font-size:13px;border:0.5px solid var(--border2);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit}
+.field textarea{resize:vertical;min-height:72px}
+.g2f{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3f{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+@media(max-width:500px){.g2f,.g3f{grid-template-columns:1fr}}
+
+/* Sign */
+.sign-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.sign-box{border:0.5px solid var(--border);border-radius:var(--r-md);padding:10px 12px;text-align:center}
+.sign-box .role{font-size:11px;color:var(--text2);margin-bottom:6px}
+.sign-box .sig-area{height:44px;border-bottom:0.5px solid var(--border2);margin-bottom:5px}
+.sign-box .date-line{font-size:11px;color:var(--text3)}
+
+/* Class rows */
+.class-rows{display:flex;flex-direction:column;gap:6px}
+.class-row{display:grid;grid-template-columns:1fr 1fr 1fr 28px;gap:6px;align-items:center}
+.class-row input{padding:7px 9px;font-size:13px;border:0.5px solid var(--border2);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;width:100%}
+.add-row-btn{font-size:12px;color:var(--accent);border:none;background:none;cursor:pointer;padding:4px 0;margin-top:2px}
+.rm-btn{border:none;background:none;color:var(--text3);cursor:pointer;font-size:18px;padding:0;line-height:1}
+
+/* Handover table */
+.ht-table{width:100%;border-collapse:collapse;font-size:13px}
+.ht-table th{background:var(--accent);color:#fff;padding:8px 10px;font-weight:500;font-size:12px;text-align:left}
+.ht-table td{padding:0;border:0.5px solid var(--border);vertical-align:top}
+.ht-table td input,.ht-table td textarea,.ht-table td select{width:100%;border:none;background:transparent;font-size:13px;padding:7px 9px;color:var(--text);font-family:inherit;resize:none;outline:none}
+.ht-table td input:focus,.ht-table td textarea:focus{background:var(--bg2)}
+.ht-table td textarea{min-height:52px}
+.ht-table .row-label{background:var(--bg2);font-size:12px;font-weight:500;color:var(--text2);padding:8px 10px;white-space:nowrap;width:90px;vertical-align:middle}
+.ht-table .sub-label{font-size:11px;color:var(--text3);padding:4px 9px 0;display:block}
+.ht-note{font-size:12px;color:var(--text2);background:var(--bg2);border-radius:var(--r-md);padding:8px 12px;margin-top:10px;line-height:1.6}
+
+/* Info bar */
+.info-bar{background:var(--bg2);border-radius:var(--r-md);padding:10px 14px;font-size:12.5px;color:var(--text2);line-height:1.7;margin-bottom:14px}
+
+/* Buttons */
+.btn-row{display:flex;justify-content:flex-end;gap:8px;margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border)}
+.btn-sec{font-size:13px;padding:7px 16px;border-radius:var(--r-md);border:0.5px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer}
+.btn-pri{font-size:13px;padding:7px 18px;border-radius:var(--r-md);border:none;background:var(--accent);color:#fff;cursor:pointer;font-weight:500}
+
+/* Notice box */
+.notice{background:#FAEEDA;color:#633806;border:0.5px solid #FAC775;border-radius:var(--r-md);padding:11px 14px;font-size:12.5px;line-height:1.7;margin-bottom:14px;display:flex;gap:8px;align-items:flex-start}
+.notice code{background:rgba(255,255,255,.5);padding:1px 5px;border-radius:4px;font-family:inherit;font-size:12px}
+@media(prefers-color-scheme:dark){.notice{background:#412402;color:#FAC775;border-color:#633806}.notice code{background:rgba(0,0,0,.3)}}
+
+/* Step rows */
+.step-row{display:flex;align-items:flex-start;gap:8px;background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-md);padding:10px 12px;margin-bottom:8px}
+.step-row.dragging{opacity:.4}
+.step-row.drag-over{border-color:var(--accent);border-style:dashed}
+.step-drag{color:var(--text3);cursor:grab;font-size:14px;padding:2px 2px 2px 0;flex-shrink:0;margin-top:3px;user-select:none}
+.step-drag:active{cursor:grabbing}
+.step-chk{min-width:18px;height:18px;border-radius:5px;border:0.5px solid var(--border2);display:flex;align-items:center;justify-content:center;background:var(--bg);margin-top:3px;flex-shrink:0;cursor:pointer;transition:all .1s}
+.step-chk.on{background:#1D9E75;border-color:#1D9E75}
+.step-chk.on::after{content:'✓';color:#fff;font-size:11px}
+.step-body{flex:1}
+.step-title-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.step-num{font-size:11px;font-weight:500;color:#1E3A54;background:#E3EAF2;min-width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-title-row input{flex:1;border:none;background:transparent;font-size:13px;font-weight:500;padding:2px 0;color:var(--text);font-family:inherit}
+.step-title-row input:focus{outline:none}
+.step-note textarea{width:100%;border:none;background:transparent;font-size:12.5px;padding:2px 0;color:var(--text2);resize:vertical;min-height:32px;font-family:inherit}
+.step-note textarea:focus{outline:none;color:var(--text)}
+.step-del{border:none;background:none;color:var(--text3);cursor:pointer;font-size:17px;padding:0;line-height:1;flex-shrink:0;margin-top:2px}
+
+/* Upload zone */
+.upload-zone{border:1.5px dashed var(--border2);border-radius:var(--r-md);padding:20px;text-align:center;cursor:pointer;background:var(--bg2);transition:border-color .15s}
+.upload-zone:hover{border-color:var(--accent)}
+.thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;margin-top:12px}
+.thumb{position:relative;border:0.5px solid var(--border);border-radius:var(--r-md);overflow:hidden;background:var(--bg2)}
+.thumb img{width:100%;height:90px;object-fit:cover;display:block}
+.thumb .cap{font-size:10.5px;padding:4px 6px;color:var(--text2);background:var(--bg);border-top:0.5px solid var(--border)}
+.thumb .rm{position:absolute;top:4px;right:4px;width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;border:none;cursor:pointer;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:center}
+.thumb-tag{position:absolute;top:4px;left:4px;font-size:9.5px;font-weight:500;padding:1px 6px;border-radius:20px;background:rgba(255,255,255,.92);color:#1E3A54}
+
+/* Communication book */
+.cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.cb-grid{grid-template-columns:1fr}}
+.cb-box label{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--text2);margin-bottom:5px}
+.cb-box textarea{width:100%;min-height:90px;padding:9px 10px;font-size:13px;border:0.5px solid var(--border2);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;resize:vertical}
+
+/* Roster table (reuse ht-table base, add specifics) */
+.roster-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.roster-table th{background:var(--accent);color:#fff;padding:6px 8px;font-weight:500;font-size:11px;text-align:left}
+.roster-table td{padding:0;border:0.5px solid var(--border)}
+.roster-table td input{width:100%;border:none;background:transparent;font-size:12.5px;padding:6px 8px;color:var(--text);font-family:inherit}
+.roster-table td input:focus{outline:none;background:var(--bg2)}
+.roster-del{border:none;background:none;color:var(--text3);cursor:pointer;font-size:15px;padding:0 4px}
+
+/* Attendance sheet print tool */
+.at-dropzone{border:2px dashed var(--border2);border-radius:var(--r-md);padding:32px 18px;text-align:center;cursor:pointer;background:var(--bg2);transition:border-color .15s,background .15s}
+.at-dropzone.drag{border-color:var(--accent);background:var(--accent-light)}
+.at-icon{font-size:26px;margin-bottom:6px;color:var(--text3)}
+.at-main{font-size:13.5px;font-weight:500;margin-bottom:4px;color:var(--text)}
+.at-hint{font-size:11.5px;color:var(--text3)}
+.at-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}
+.at-count-badge{font-size:12px;background:#E1F5EE;color:#085041;padding:4px 10px;border-radius:20px;font-weight:500}
+@media(prefers-color-scheme:dark){.at-count-badge{background:#04342C;color:#9FE1CB}}
+.at-pages{display:flex;flex-direction:column;gap:14px}
+.at-page-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
+.at-page-head{display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:0.5px solid var(--border);background:var(--bg2)}
+.at-page-num{width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.at-page-head input{flex:1;border:none;background:transparent;font-size:13px;font-weight:500;color:var(--text);padding:4px 2px}
+.at-page-head input:focus{outline:none}
+.at-remove-btn{border:none;background:none;color:var(--text3);cursor:pointer;font-size:18px;padding:0 4px;line-height:1}
+.at-remove-btn:hover{color:#791F1F}
+.at-page-body{padding:12px;background:var(--bg2)}
+.at-page-body img{display:block;width:100%;height:auto;border-radius:4px}
+.at-empty-state{text-align:center;padding:24px 0;color:var(--text3);font-size:13px}
+
+/* Print */
+@media print{
+  body{background:#fff!important;margin:0}
+  html{height:auto!important}
+  .page-header{display:none}
+  .container{max-width:100%;padding:0;margin:0}
+  .tabs{display:none}
+  .view{display:none!important;height:auto!important;overflow:visible!important}
+  .view.print-target{display:block!important;height:auto!important;overflow:visible!important}
+  .card{border:1px solid #ccc!important;box-shadow:none;height:auto!important;overflow:visible!important;page-break-inside:auto}
+  .card:not(.print-active){display:none}
+  .sec-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .ht-table th,.guide-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .btn-row{display:none}
+  .dl-card{border:1px solid #ccc!important}
+  .print-card .field input,.print-card .field select,
+  .print-card .class-row input,
+  .print-card .ht-table input,.print-card .ht-table select,
+  .print-card .roster-table input{
+    border:none!important;border-bottom:1px solid #999!important;border-radius:0!important;background:transparent!important;padding:4px 2px!important;
+  }
+  .print-card textarea{border:none!important;background:transparent!important;padding:4px 2px!important;height:auto!important;overflow:visible!important}
+  .print-card .ht-table td textarea{min-height:auto!important}
+  .print-card .cb-box textarea{border:1px solid #ccc!important;background:transparent!important}
+  .rm-btn,.add-row-btn,.step-del,.step-drag,.thumb .rm,.upload-zone{display:none!important}
+  .step-row{border:1px solid #ccc!important;break-inside:avoid;page-break-inside:avoid;padding:5px 8px!important;margin-bottom:4px!important}
+  .step-num{width:16px!important;height:16px!important;min-width:16px!important;font-size:9.5px!important}
+  .step-title-row{margin-bottom:1px!important}
+  .step-title-row input{font-size:11.5px!important;padding:0!important}
+  .step-note textarea{font-size:10.5px!important;min-height:auto!important;line-height:1.4!important;padding:0!important}
+  .step-note textarea:placeholder-shown{display:none!important}
+  .step-chk{display:none!important}
+  .step-row .step-body{margin-left:0}
+  .thumb-grid{grid-template-columns:repeat(2,1fr)!important}
+  .thumb{border:1px solid #ccc!important;break-inside:avoid;page-break-inside:avoid}
+  .thumb img{height:140px!important;object-fit:contain!important;background:#fafafa}
+  .thumb-tag{display:none!important}
+  .roster-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .notice{border:1px solid #ccc!important;background:#fff!important;color:#333!important}
+  .print-card{box-shadow:none!important;height:auto!important;overflow:visible!important}
+  .g2f,.g3f,.g4,.cb-grid{break-inside:avoid;page-break-inside:avoid}
+  .sign-strip{break-inside:avoid;page-break-inside:avoid}
+
+  body.at-print-mode .page-header,
+  body.at-print-mode .tabs{display:none!important}
+  body.at-print-mode .view{display:none!important}
+  body.at-print-mode .view#t7{display:block!important}
+  body.at-print-mode #atCard{border:none!important;display:block!important}
+  body.at-print-mode #atCard>.sec-header,
+  body.at-print-mode #atCard>p,
+  body.at-print-mode .at-dropzone,
+  body.at-print-mode .at-toolbar,
+  body.at-print-mode #atCard>.notice,
+  body.at-print-mode .at-page-head .at-remove-btn{display:none!important}
+  body.at-print-mode .at-pages{gap:0!important}
+  body.at-print-mode .at-page-card{
+    border:none!important;border-radius:0!important;
+    page-break-after:always;break-after:page;
+    width:100%;height:100vh;display:flex;flex-direction:column;
+  }
+  body.at-print-mode .at-page-card:last-child{page-break-after:auto}
+  body.at-print-mode .at-page-head{border:none!important;background:#fff!important;padding:6mm 8mm 3mm!important;flex-shrink:0}
+  body.at-print-mode .at-page-head input{font-size:15pt!important;font-weight:700!important;color:#000!important;pointer-events:none}
+  body.at-print-mode .at-page-num{display:none!important}
+  body.at-print-mode .at-page-body{background:#fff!important;padding:0 8mm 8mm!important;flex:1;display:flex;align-items:center;justify-content:center}
+  body.at-print-mode .at-page-body img{width:100%;height:auto;max-height:100%;object-fit:contain;box-shadow:none!important;border-radius:0!important}
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>英語部代課暨特休手冊</h1>
+  <p>耶加教育機構 English Department</p>
+</div>
+
+<div class="container">
+
+<div class="tabs">
+  <button class="tab active" onclick="sw('t1',this)">📋 規劃型請假</button>
+  <button class="tab" onclick="sw('t2',this)">⚡ 臨時請假</button>
+  <button class="tab" onclick="sw('t3',this)">🌴 特休須知</button>
+  <button class="tab" onclick="sw('t4',this)">📣 通報模板</button>
+  <button class="tab" onclick="sw('t5',this)">✅ 執行清單</button>
+  <button class="tab" onclick="sw('t6',this)">📄 表單下載</button>
+  <button class="tab" onclick="sw('t7',this)">🖨️ 點名表列印</button>
+</div>
+
+<!-- TAB 1 -->
+<div class="view active" id="t1">
+  <div class="card">
+    <div class="sec-header">類別 1：規劃型請假（特休 / 事假 / 婚喪假 / 產假）</div>
+    <div class="alert a-teal"><span>ℹ️</span><span>關鍵原則：請假 <strong>1 週前</strong>完成所有課程交接，含教案、教材、學生資料、Line Mission 家長訊息、教學端傳遞。</span></div>
+    <h3>請假流程</h3>
+    <ul class="steps">
+      <li><span class="sn">1</span><span>職員提出請假需求</span></li>
+      <li><span class="sn">2</span>
+        <div>按照天數啟動不同做法：
+          <div style="margin-top:8px">
+            <div class="branch"><div class="bh"><span class="badge badge-teal">1 天以內</span></div>填寫<strong>課程交接表</strong> → 組長審核</div>
+            <div class="branch"><div class="bh"><span class="badge badge-amber">1 天以上，未達 3 天</span></div>填寫<strong>特休申請表</strong> → 組長審核</div>
+            <div class="branch"><div class="bh"><span class="badge badge-red">3 天以上</span></div>填寫<strong>特休申請表</strong> → 組長審核 → <strong>送審主任簽名</strong></div>
+          </div>
+        </div>
+      </li>
+      <li><span class="sn">3</span><span>組長審核申請表；超過 3 天須送主任簽名</span></li>
+      <li><span class="sn">4</span><span>於請假 <strong>1 週前</strong>完成課程交接（教案 / 教材 / 學生資料 / Line Mission 家長訊息 / 教學端傳遞）</span></li>
+      <li><span class="sn">5</span><span>回歸上班後，與交接老師了解上課期間的狀況</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <p class="card-title">提前劃假 ─ 校區群組通知範例</p>
+    <div class="tmpl-wrap">
+      <pre class="tmpl" id="tp0">@all
+各位總校戰友：
+我即將於 ____（日期）安排特休，這段時間的課程都會由英語部 ____（代課老師）代課，安排如下
+
+📅 ____（日期）
+____（班級）____（時段）
+
+◆ 家長端已全面於 ____ 透過 Line Mission 告知，學生端全面於本週在課堂親自告知，他們也清楚知道代課老師是誰。
+
+⭐ 若有學生臨時請假資訊，請於 14:00 前打到四樓櫃檯告知英語部，或私訊該班老師。感謝大家 😊</pre>
+      <button class="copy-btn" onclick="cp('tp0',this)">複製</button>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2 -->
+<div class="view" id="t2">
+  <div class="card">
+    <div class="sec-header">類別 2：臨時請假（突然病假）</div>
+    <div class="alert a-amber"><span>⚠️</span><span>臨時請假後，須於 <strong>接送、課程開始前 2 小時內</strong>完成所有通報。</span></div>
+    <h3>總流程</h3>
+    <ul class="steps">
+      <li><span class="sn">1</span><span>職員提出臨時請假需求</span></li>
+      <li><span class="sn">2</span><span>判斷提出請假的時間點（當日 / 前一天）</span></li>
+      <li><span class="sn">3</span><span>按照下方類別進行對應處理辦法</span></li>
+      <li><span class="sn">4</span><span>請假老師完成各單位通報（教學部 / 館長 / 單英家長）</span></li>
+      <li><span class="sn">5</span><span>回歸上班後，與交接老師了解上課期間的狀況</span></li>
+      <li><span class="sn">6</span><span>尚未代課完畢的課程，安排 <strong>2 週內補課完畢</strong></span></li>
+    </ul>
+    <hr class="divider">
+    <h3>情境細則</h3>
+    <div class="decision">
+      <div class="dl">▶ 情境 1：當天臨時請假</div>
+      <div class="branch">
+        <div class="bh"><span class="badge badge-red">即將開課，無法進行交接</span></div>
+        <ul class="sub-list">
+          <li>因即將開課無法交接，請假職員以 <strong>2 週內調課補完進度</strong>處理</li>
+          <li>當天由「請假職員」告知相關單位（教學部 / 館長 / 單英家長）當日課程調課</li>
+          <li>特別通知單英學生家長當日無課程進行；若來不及，單英學生改到櫃檯托育等候家長接送</li>
+          <li>請假職員需於 <strong>2 週內</strong>將課程進度補齊，並告知家長和教學端補課完畢</li>
+        </ul>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="dl">▶ 情境 2：前一天臨時請假</div>
+      <div class="branch">
+        <div class="bh"><span class="badge badge-teal">🔺 晚上 8:00 前收到</span></div>
+        <div style="font-size:13px;line-height:1.8;margin-bottom:6px">
+          <strong>2-1　授課時數 ≤ 3 小時：</strong><br>
+          <span style="color:var(--text2)">由英語組長協調，安排「代理老師」進行代課（代理老師：ECC / 兼職人員 / 輔師）</span>
+        </div>
+        <div style="font-size:13px;line-height:1.8">
+          <strong>2-2　授課時數 &gt; 3 小時：</strong><br>
+          <span style="color:var(--text2)">由請假職員自行調課處理，並通知相關單位（家長 / 教學部）</span>
+        </div>
+      </div>
+      <div class="branch" style="margin-top:7px">
+        <div class="bh"><span class="badge badge-red">🔺 超過晚上 8:00 後 / 下班時段收到</span></div>
+        <ul class="sub-list">
+          <li>歸類為「即將開課，無法進行交接」，處理方式同情境 1</li>
+          <li>由「請假職員」告知相關單位（教學部 / 館長 / 單英家長）隔天課程調課</li>
+          <li>特別通知單英學生家長隔天無課程進行</li>
+          <li>請假職員需於 <strong>2 週內</strong>將課程進度補齊，並告知家長和教學端補課完畢</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <p class="card-title">單上英語學生 ─ 三項必確認</p>
+    <ul class="steps">
+      <li><span class="sn">1</span><div><strong>Library Time 暫停</strong><br><span style="color:var(--text2)">告知館長，學生於下次課程完成兩個 Mission</span></div></li>
+      <li><span class="sn">2</span><div><strong>是否有接送</strong><br><span style="color:var(--text2)">告知接送老師確認；若需先接回耶加等候，一併告知學務老師</span></div></li>
+      <li><span class="sn">3</span><div><strong>是否有吃晚餐</strong><br><span style="color:var(--text2)">若已放碗 → 請學務老師告知家長來接順便取回晚餐</span></div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 3 -->
+<div class="view" id="t3">
+  <div class="card">
+    <div class="sec-header">英語部 特休須知</div>
+    <div class="quote-block"><strong>"Your time off is important, and so is teamwork."</strong><br>你的假期很重要，但團隊的合作也同樣關鍵。</div>
+    <h3>六步驟 SOP</h3>
+    <ul class="steps">
+      <li><span class="sn">1</span><div><strong>提前規劃</strong><br><span style="color:var(--text2)">至少 <strong>30 天前</strong>向主管提出申請；確認當週無重要會議、交付事項或大型活動；若影響工作排程，需提前與主管討論</span></div></li>
+      <li><span class="sn">2</span><div><strong>填寫《特休申請單》</strong><br><span style="color:var(--text2)">仔細填寫交接內容，列出職務代理項目與特殊情況備註；完成後請主管簽核</span></div></li>
+      <li><span class="sn">3</span><div><strong>擬定《課程交接表》</strong><br><span style="color:var(--text2)">確保課程細節明確；如有學生提前請假須特別備註；最晚於請假<strong>前一週</strong>與職務代理人完成交接</span></div></li>
+      <li><span class="sn">4</span><div><strong>完成跨部門訊息傳達</strong><br><span style="color:var(--text2)">最晚請假前一週在英語聯絡本張貼特休資訊；告知相關教學老師並提供職務代理人聯繫方式</span></div></li>
+      <li><span class="sn">5</span><div><strong>請假期間，維持訊息暢通</strong><br><span style="color:var(--text2)">英語總導師應保持可聯絡狀態；家長 Line Mission 留言由職務代理人轉達，再由英語總導師統一回覆；突發事件仍由英語總導師負責最終回應</span></div></li>
+      <li><span class="sn">6</span><div><strong>回歸後交接</strong><br><span style="color:var(--text2)">主動找職務代理人回顧請假期間事項，確保順利銜接；若有未完成工作務必跟進</span></div></li>
+    </ul>
+  </div>
+  <div class="card">
+    <p class="card-title">請假決策指南</p>
+    <table class="guide-table">
+      <thead><tr><th style="width:42%">評估問題</th><th style="width:29%">是 ✅</th><th style="width:29%">否 ❌</th></tr></thead>
+      <tbody>
+        <tr><td>工作有無影響團隊的關鍵任務？</td><td class="ok">確保有交接</td><td class="warn">影響大，請重新考慮</td></tr>
+        <tr><td>團隊內是否有其他人同時請假？</td><td class="warn">若有，請與主管討論</td><td class="ok">沒有影響，可以請</td></tr>
+        <tr><td>這段時間是否是專案高峰期？</td><td class="warn">若是，請審慎評估</td><td class="ok">低峰期，可請</td></tr>
+        <tr><td>請假是否剛好遇到考試 / 英語活動？</td><td class="warn">需要重新調整</td><td class="ok">可以請</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="alert a-blue"><span>💡</span><span><strong>有準備的請假，才能放心的休息。</strong><br>每一次請假都是為了重新充電；每一次交接，則是對團隊的信任與尊重。感謝你的用心準備，也感謝團隊成員的互相支持。</span></div>
+  </div>
+</div>
+
+<!-- TAB 4 -->
+<div class="view" id="t4">
+  <div class="card">
+    <div class="sec-header">臨時請假 ─ 通報模板</div>
+    <div class="tmpl-label" style="margin-top:4px">1. 校區群組</div>
+    <div class="tmpl-wrap">
+      <pre class="tmpl" id="tp1">@all
+各位 ____校戰友：
+因英文老師 ______ 臨時身體不適，故 ____（日期）的 ____（班級時段）課程將停課
+
+英文老師將會於 2 週內與教學老師們另外約時間補課，而家長端已全面用訊息告知囉！
+
+感謝大家 😊</pre>
+      <button class="copy-btn" onclick="cp('tp1',this)">複製</button>
+    </div>
+    <div class="tmpl-label" style="margin-top:4px">2. 家長 Line Mission</div>
+    <div class="tmpl-wrap">
+      <pre class="tmpl" id="tp2">Dear ______'s parents,
+因英文老師 ______ 身體不適，故 ____（日期）的 ____（班級時段）課程將臨時停課，造成不便，請多包涵 😊
+
+待英文老師身體恢復後，會在 2 週內與學生、家長約時間完成補課，謝謝您！</pre>
+      <button class="copy-btn" onclick="cp('tp2',this)">複製</button>
+    </div>
+    <div class="tmpl-label" style="margin-top:4px">3. 教學部通報</div>
+    <div class="tmpl-wrap">
+      <pre class="tmpl" id="tp3">教學部您好，
+老師 ______ 今日 ____（日期）因病請假，____（班級時段）課程停課。
+已通知家長及館長，學生補課將於 2 週內安排完畢。</pre>
+      <button class="copy-btn" onclick="cp('tp3',this)">複製</button>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 5 -->
+<div class="view" id="t5">
+  <div class="card">
+    <p class="card-title">規劃型請假 ─ 申請 & 交接清單</p>
+    <ul class="checklist">
+      <li onclick="tc(this)"><span class="chk"></span><span>至少 30 天前向主管提出申請</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>確認當週無重要會議 / 大型活動</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>1 天以內：填寫課程交接表並取得組長審核</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>1 天以上：填寫特休申請表並取得組長審核</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>超過 3 天：取得主任簽名</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>取得所有代理人簽名（申請單班級欄旁）</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>使用 Apollo 提交請假單</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>擬定課程交接表（班級 / 進度 / 特殊學生備註）</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>教案、教材、學生資料交接完成</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>Line Mission 家長訊息排程完成</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>英語聯絡本張貼特休資訊</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>告知相關教學老師並提供代理人聯繫方式</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>回歸後與職務代理人完成交接回顧</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <p class="card-title">臨時請假 ─ 通報清單（2 小時內完成）</p>
+    <ul class="checklist">
+      <li onclick="tc(this)"><span class="chk"></span><span>判斷請假時間點（當日 / 前一天 8:00 前後）</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>通知教學部停課</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>通知館長（Library Time 暫停）</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>校區群組傳送停課訊息</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>Line Mission 通知家長</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>確認單英學生接送安排</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>確認單英學生晚餐狀況</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>（組長）確認代理老師人選（≤ 3hr 適用）</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>填寫課程交接表（每核心課程各填一份），交予代課老師</span></li>
+      <li onclick="tc(this)"><span class="chk"></span><span>2 週內補課完成，通知家長與教學端</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 6 -->
+<div class="view" id="t6">
+
+  <div class="notice"><span>📌</span><span><strong>填表順序：</strong>請先依請假類型完成「請假申請表」，再填寫下方的「課程交接表」。</span></div>
+
+  <div class="card print-card" id="leaveFormCard">
+    <div class="sec-header">請假申請表 <span style="font-size:11px;background:rgba(255,255,255,0.22);padding:2px 8px;border-radius:20px;font-weight:400;margin-left:6px">臨時請假（1 天內）線上填寫</span></div>
+    <div class="alert a-amber" style="margin-bottom:14px"><span>⚠️</span><span>臨時請假請直接在此填寫並列印；詳細課程交接內容請至下方「課程交接表」填寫，此處無需重複。</span></div>
+
+    <div class="g3f">
+      <div class="field"><label>姓名</label><input type="text" placeholder="請輸入姓名"></div>
+      <div class="field"><label>所屬校區</label><input type="text" placeholder="請輸入校區（如：總校）"></div>
+      <div class="field"><label>請假日期</label><input type="date"></div>
+    </div>
+    <div class="g2f">
+      <div class="field"><label>請假原因</label>
+        <select><option value="">請選擇</option><option>病假</option><option>事假</option><option>其他臨時狀況</option></select>
+      </div>
+      <div class="field"><label>請假時間點</label>
+        <select><option value="">請選擇</option><option>當天臨時請假</option><option>前一天晚上 8:00 前</option><option>前一天晚上 8:00 後</option></select>
+      </div>
+    </div>
+    <div class="field"><label>備註說明 <span style="font-weight:400;color:var(--text3)">（選填）</span></label>
+      <textarea style="min-height:55px" placeholder="例：已通知教學部與館長，課程將於 2 週內補課完畢"></textarea>
+    </div>
+
+    <div class="sign-strip">
+      <div class="sign-box">
+        <div class="role">申請人簽名</div>
+        <div class="sig-area"></div>
+        <div class="date-line">日期：＿＿＿ / ＿＿ / ＿＿</div>
+      </div>
+      <div class="sign-box">
+        <div class="role">英語組長簽名</div>
+        <div class="sig-area"></div>
+        <div class="date-line">日期：＿＿＿ / ＿＿ / ＿＿</div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-sec" onclick="clearLeaveForm()">清除重填</button>
+      <button class="btn-pri" onclick="printLeaveForm()">🖨️ 輸出 PDF</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-header">特休申請單下載 <span style="font-size:11px;background:rgba(255,255,255,0.22);padding:2px 8px;border-radius:20px;font-weight:400;margin-left:6px">規劃請假（1 天以上）</span></div>
+    <div class="dl-section">
+      <a class="dl-card" href="https://drive.google.com/drive/folders/1t3e0gfnw1OqoS2BfnywR6XqyjeUyJm7b" target="_blank">
+        <div class="dl-icon">📄</div>
+        <div class="dl-info">
+          <p class="dl-title">特休申請單 <span class="dl-tag">超過 1 天特休填寫</span></p>
+          <p class="dl-desc">Google Drive 下載 ─ 列印後手寫填寫，完成後交英語組長審核（超過 3 天需主任簽名）</p>
+        </div>
+        <span class="dl-arrow">↗</span>
+      </a>
+    </div>
+    <p style="margin-top:10px;font-size:12px;color:var(--text3)">點擊後開啟 Google Drive，選擇檔案下載或列印；填妥後仍需完成下方課程交接表。</p>
+  </div>
+
+  <div class="card print-card" id="handoverFormCard">
+    <div class="sec-header">課程交接表 <span style="font-size:11px;background:rgba(255,255,255,0.22);padding:2px 8px;border-radius:20px;font-weight:400;margin-left:6px">臨時請假與規劃請假皆須填寫</span></div>
+    <div class="alert a-teal" style="margin-bottom:14px"><span>ℹ️</span><span>規劃請假請於 <strong>1 週前</strong>完成填寫並交組長審核；臨時請假請儘快完成，代課老師需確認後簽名。</span></div>
+    <div class="notice"><span>⚠️</span><span><strong>填表規則：</strong>每一「核心課程」需各自填寫一份課程交接表。例如 <code>FLH</code>（核心課）與 <code>VLH</code>、<code>OLH</code>（搭配課）若實際為兩堂不同課程，需分別填寫 <strong>2 份</strong>課程交接表，請勿合併在同一份表單內。</span></div>
+
+    <div class="g3f">
+      <div class="field"><label>本班老師</label><input type="text" placeholder="姓名"></div>
+      <div class="field"><label>所屬校區</label><input type="text" placeholder="請輸入校區（如：總校）"></div>
+      <div class="field"><label>上課日期</label><input type="date"></div>
+    </div>
+    <div class="g3f">
+      <div class="field"><label>代課老師</label><input type="text" placeholder="姓名"></div>
+      <div class="field"><label>班級 <span style="font-weight:400;color:var(--text3)">（單一核心課程）</span></label><input type="text" placeholder="如：VA1B + SA1B"></div>
+      <div class="field"><label>上課時段</label><input type="text" placeholder="如：14:00–15:00"></div>
+    </div>
+    <div class="field"><label>教室</label><input type="text" placeholder="如：F-E" style="max-width:200px"></div>
+
+    <hr class="divider">
+    <div style="font-size:12px;font-weight:500;color:var(--text2);margin-bottom:8px">教學步驟 <span style="font-weight:400;color:var(--text3)">（可勾選啟用、編輯內容、刪除或新增）</span></div>
+    <div id="stepList"></div>
+    <button class="add-row-btn" onclick="addStep()">＋ 新增步驟</button>
+
+    <hr class="divider">
+    <div style="font-size:12px;font-weight:500;color:var(--text2);margin-bottom:8px">教材畫面上傳 <span style="font-weight:400;color:var(--text3)">（點名表 / 評量卷 / 課本進度截圖）</span></div>
+    <div class="alert a-amber" style="margin-bottom:10px"><span>⚠️</span><span><strong>務必至「點名表列印」分頁上傳點名表截圖並印出</strong>，供代課老師點名使用；此處則用於補充評量卷 / 課本進度截圖。</span></div>
+    <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
+      <div style="font-size:22px;margin-bottom:4px">🖼️</div>
+      <p style="margin:0;font-size:12.5px;color:var(--text2)">點擊上傳圖片</p>
+      <p style="margin:2px 0 0;font-size:11px;color:var(--text3)">支援 JPG / PNG，可一次選取多張；輸出 PDF 時會一併附上</p>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" multiple style="display:none" onchange="handleFiles(event)">
+    <div class="thumb-grid" id="thumbGrid"></div>
+
+    <hr class="divider">
+    <div style="font-size:12px;font-weight:500;color:var(--text2);margin-bottom:8px">聯絡本 Communication Book</div>
+    <div class="cb-grid">
+      <div class="cb-box">
+        <label>📘 Today's lesson 今日課程</label>
+        <textarea placeholder="例：Unit 5 Lesson 3 — 複習單字與句型，完成 Vocabulary &amp; Sentence Evaluation"></textarea>
+      </div>
+      <div class="cb-box">
+        <label>📒 Homework 回家作業</label>
+        <textarea placeholder="例：Workbook p.12–13；背誦本週單字 10 個"></textarea>
+      </div>
+    </div>
+    <div class="upload-zone" style="margin-top:10px" onclick="document.getElementById('cbFileInput').click()">
+      <div style="font-size:22px;margin-bottom:4px">📷</div>
+      <p style="margin:0;font-size:12.5px;color:var(--text2)">點擊上傳聯絡本截圖</p>
+      <p style="margin:2px 0 0;font-size:11px;color:var(--text3)">支援 JPG / PNG，可一次選取多張；輸出 PDF 時會一併附上</p>
+    </div>
+    <input type="file" id="cbFileInput" accept="image/*" multiple style="display:none" onchange="handleCbFiles(event)">
+    <div class="thumb-grid" id="cbThumbGrid"></div>
+
+    <hr class="divider">
+    <div style="font-size:12px;font-weight:500;color:var(--text2);margin-bottom:8px">學生名冊 / 特殊學生備註</div>
+    <table class="roster-table" id="rosterTable">
+      <thead><tr><th style="width:18%">中文名</th><th style="width:18%">英文名</th><th style="width:14%">年級</th><th>備註（過敏 / 特殊狀況 / 程度等）</th><th style="width:30px"></th></tr></thead>
+      <tbody id="rosterBody"></tbody>
+    </table>
+    <button class="add-row-btn" onclick="addRoster()">＋ 新增學生</button>
+
+    <hr class="divider">
+    <div style="font-size:12px;font-weight:500;color:var(--text2);margin-bottom:8px">Special Situation 特殊狀況</div>
+    <textarea style="width:100%;min-height:70px;padding:9px 10px;font-size:13px;border:0.5px solid var(--border2);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;resize:vertical" placeholder="若有特殊狀況，例如家長在聯絡本的留言或是課堂突發狀況，可以寫在這邊呦！"></textarea>
+
+    <div class="sign-strip">
+      <div class="sign-box">
+        <div class="role">代課老師簽名 Teacher's Signature</div>
+        <div class="sig-area"></div>
+        <div class="date-line">日期：＿＿＿ / ＿＿ / ＿＿</div>
+      </div>
+      <div class="sign-box">
+        <div class="role">英語組長審核</div>
+        <div class="sig-area"></div>
+        <div class="date-line">日期：＿＿＿ / ＿＿ / ＿＿</div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-sec" onclick="clearForm()">清除重填</button>
+      <button class="btn-pri" onclick="printHandover()">🖨️ 輸出 PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 7：點名表列印工具 -->
+<div class="view" id="t7">
+  <div class="card" id="atCard">
+    <div class="sec-header">點名表列印工具</div>
+    <p style="margin:0 0 14px">上傳截圖 → 自動撐滿頁面 → 列印 / 輸出 PDF 一律放大顯示</p>
+
+    <div class="at-dropzone" id="atDropzone">
+      <div class="at-icon">⬆</div>
+      <div class="at-main">點擊或拖曳上傳點名表截圖</div>
+      <div class="at-hint">支援多張圖片，可依老師分頁・自動排序為列印頁</div>
+      <input type="file" id="atFileInput" accept="image/*" multiple style="display:none">
+    </div>
+
+    <div class="at-toolbar">
+      <button class="btn-pri" id="atPrintBtn" disabled>🖨️ 列印 / 輸出 PDF</button>
+      <button class="btn-sec" id="atClearBtn" disabled>清空全部</button>
+      <span class="at-count-badge" id="atCountBadge">0 張</span>
+    </div>
+
+    <div class="at-pages" id="atPages"></div>
+    <div class="at-empty-state" id="atEmptyState">尚未上傳任何截圖</div>
+
+    <div class="notice" style="margin-top:18px"><span>ℹ️</span><span><strong>防呆說明：</strong>列印或輸出 PDF 時，標題列與上傳區會自動隱藏，每張截圖會單獨佔滿一頁（A4 橫向），並依頁面比例自動放大至最大可視範圍。可在每頁標題輸入老師姓名方便分類保存。</span></div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+function sw(id,btn){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function tc(li){
+  const b=li.querySelector('.chk');
+  b.classList.toggle('on');
+  li.classList.toggle('done');
+}
+function cp(id,btn){
+  const t=document.getElementById(id).textContent.trim();
+  navigator.clipboard.writeText(t).then(()=>{
+    btn.textContent='已複製！';setTimeout(()=>btn.textContent='複製',1800);
+  }).catch(()=>{
+    const ta=document.createElement('textarea');
+    ta.value=t;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    btn.textContent='已複製！';setTimeout(()=>btn.textContent='複製',1800);
+  });
+}
+let rc=1;
+const defaultSteps=[
+  {title:'Review vocabulary 複習單字', note:''},
+  {title:'Review sentence structure 複習句型', note:''},
+  {title:'Evaluation time 評量時間', note:'設定計時器，時間到才能交卷'},
+  {title:'Dinner time 用餐時間', note:''},
+  {title:'Review reading 複習閱讀', note:''},
+  {title:'Word puzzle', note:''},
+  {title:'Write communication book 寫聯絡本', note:''}
+];
+function renderSteps(){
+  const list=document.getElementById('stepList');
+  if(!list) return;
+  list.innerHTML='';
+  defaultSteps.forEach((s,i)=>{
+    const row=document.createElement('div');
+    row.className='step-row';
+    row.draggable=true;
+    row.innerHTML=`<span class="step-drag" title="拖曳調整順序">⠿</span>
+      <span class="step-chk on" onclick="this.classList.toggle('on')"></span>
+      <div class="step-body">
+        <div class="step-title-row"><span class="step-num">${i+1}</span><input type="text" value="${s.title}"></div>
+        <div class="step-note"><textarea placeholder="補充說明（選填）">${s.note}</textarea></div>
+      </div>
+      <button class="step-del" onclick="atRemoveStep(this)">×</button>`;
+    list.appendChild(row);
+  });
+  atBindDrag();
+}
+function atRenumberSteps(){
+  document.querySelectorAll('#stepList .step-row').forEach((row,i)=>{
+    const num=row.querySelector('.step-num');
+    if(num) num.textContent=i+1;
+  });
+}
+function atRemoveStep(btn){
+  btn.closest('.step-row').remove();
+  atRenumberSteps();
+}
+function addStep(){
+  const list=document.getElementById('stepList');
+  const row=document.createElement('div');
+  row.className='step-row';
+  row.draggable=true;
+  row.innerHTML=`<span class="step-drag" title="拖曳調整順序">⠿</span>
+    <span class="step-chk on" onclick="this.classList.toggle('on')"></span>
+    <div class="step-body">
+      <div class="step-title-row"><span class="step-num">${list.children.length+1}</span><input type="text" placeholder="步驟名稱"></div>
+      <div class="step-note"><textarea placeholder="補充說明（選填）"></textarea></div>
+    </div>
+    <button class="step-del" onclick="atRemoveStep(this)">×</button>`;
+  list.appendChild(row);
+  atBindDrag();
+}
+let atDragRow=null;
+function atBindDrag(){
+  document.querySelectorAll('#stepList .step-row').forEach(row=>{
+    row.ondragstart=e=>{ atDragRow=row; row.classList.add('dragging'); e.dataTransfer.effectAllowed='move'; };
+    row.ondragend=()=>{ row.classList.remove('dragging'); document.querySelectorAll('#stepList .step-row').forEach(r=>r.classList.remove('drag-over')); atRenumberSteps(); };
+    row.ondragover=e=>{ e.preventDefault(); if(row!==atDragRow) row.classList.add('drag-over'); };
+    row.ondragleave=()=>{ row.classList.remove('drag-over'); };
+    row.ondrop=e=>{
+      e.preventDefault();
+      row.classList.remove('drag-over');
+      if(!atDragRow||row===atDragRow) return;
+      const list=document.getElementById('stepList');
+      const rows=Array.from(list.children);
+      const fromIdx=rows.indexOf(atDragRow);
+      const toIdx=rows.indexOf(row);
+      if(fromIdx<toIdx) row.after(atDragRow);
+      else row.before(atDragRow);
+      atRenumberSteps();
+    };
+  });
+}
+function addRoster(){
+  const body=document.getElementById('rosterBody');
+  if(!body) return;
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<td><input type="text" placeholder="中文名"></td><td><input type="text" placeholder="英文名"></td><td><input type="text" placeholder="年級"></td><td><input type="text" placeholder="備註"></td><td><button class="roster-del" onclick="this.closest('tr').remove()">×</button></td>`;
+  body.appendChild(tr);
+}
+function handleFiles(e){
+  const files=Array.from(e.target.files);
+  const grid=document.getElementById('thumbGrid');
+  files.forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=function(ev){
+      const div=document.createElement('div');
+      div.className='thumb';
+      div.innerHTML=`<span class="thumb-tag">教材</span><img src="${ev.target.result}"><button class="rm" onclick="this.closest('.thumb').remove()">×</button><div class="cap">${file.name.length>16?file.name.slice(0,14)+'…':file.name}</div>`;
+      grid.appendChild(div);
+    };
+    reader.readAsDataURL(file);
+  });
+  e.target.value='';
+}
+function handleCbFiles(e){
+  const files=Array.from(e.target.files);
+  const grid=document.getElementById('cbThumbGrid');
+  files.forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=function(ev){
+      const div=document.createElement('div');
+      div.className='thumb';
+      div.innerHTML=`<span class="thumb-tag">聯絡本</span><img src="${ev.target.result}"><button class="rm" onclick="this.closest('.thumb').remove()">×</button><div class="cap">${file.name.length>16?file.name.slice(0,14)+'…':file.name}</div>`;
+      grid.appendChild(div);
+    };
+    reader.readAsDataURL(file);
+  });
+  e.target.value='';
+}
+function clearForm(){
+  document.querySelectorAll('#handoverFormCard input,#handoverFormCard select,#handoverFormCard textarea').forEach(el=>el.value='');
+  const grid=document.getElementById('thumbGrid');
+  if(grid) grid.innerHTML='';
+  const cbGrid=document.getElementById('cbThumbGrid');
+  if(cbGrid) cbGrid.innerHTML='';
+  const rb=document.getElementById('rosterBody');
+  if(rb){ rb.innerHTML=''; addRoster(); addRoster(); }
+  renderSteps();
+}
+function printHandover(){
+  document.getElementById('t6').classList.add('print-target');
+  document.getElementById('handoverFormCard').classList.add('print-active');
+  document.querySelectorAll('#handoverFormCard input,#handoverFormCard textarea').forEach(el=>el.setAttribute('value', el.value));
+  document.querySelectorAll('#handoverFormCard textarea').forEach(el=>el.textContent=el.value);
+  window.print();
+  setTimeout(()=>{
+    document.getElementById('t6').classList.remove('print-target');
+    document.getElementById('handoverFormCard').classList.remove('print-active');
+  }, 500);
+}
+function clearLeaveForm(){
+  document.querySelectorAll('#leaveFormCard input,#leaveFormCard select,#leaveFormCard textarea').forEach(el=>el.value='');
+}
+function printLeaveForm(){
+  document.getElementById('t6').classList.add('print-target');
+  document.getElementById('leaveFormCard').classList.add('print-active');
+  document.querySelectorAll('#leaveFormCard input,#leaveFormCard textarea').forEach(el=>el.setAttribute('value', el.value));
+  document.querySelectorAll('#leaveFormCard textarea').forEach(el=>el.textContent=el.value);
+  window.print();
+  setTimeout(()=>{
+    document.getElementById('t6').classList.remove('print-target');
+    document.getElementById('leaveFormCard').classList.remove('print-active');
+  }, 500);
+}
+renderSteps();
+addRoster();addRoster();
+
+let atPages=[];
+let atCounter=0;
+const atDropzone=document.getElementById('atDropzone');
+const atFileInput=document.getElementById('atFileInput');
+const atPagesEl=document.getElementById('atPages');
+const atEmptyState=document.getElementById('atEmptyState');
+const atPrintBtn=document.getElementById('atPrintBtn');
+const atClearBtn=document.getElementById('atClearBtn');
+const atCountBadge=document.getElementById('atCountBadge');
+
+function atRefreshUI(){
+  atEmptyState.style.display=atPages.length?'none':'block';
+  atPrintBtn.disabled=atPages.length===0;
+  atClearBtn.disabled=atPages.length===0;
+  atCountBadge.textContent=atPages.length+' 張';
+}
+function atRenderPages(){
+  atPagesEl.innerHTML='';
+  atPages.forEach((p,idx)=>{
+    const card=document.createElement('div');
+    card.className='at-page-card';
+    card.innerHTML=`
+      <div class="at-page-head">
+        <span class="at-page-num">${idx+1}</span>
+        <input type="text" placeholder="輸入老師姓名或班級（選填）" value="${p.label.replace(/"/g,'&quot;')}" data-id="${p.id}">
+        <button class="at-remove-btn" data-remove="${p.id}" aria-label="移除">×</button>
+      </div>
+      <div class="at-page-body">
+        <img src="${p.src}" alt="點名表截圖 ${idx+1}">
+      </div>`;
+    atPagesEl.appendChild(card);
+  });
+  atPagesEl.querySelectorAll('input[data-id]').forEach(inp=>{
+    inp.addEventListener('input',e=>{
+      const id=e.target.dataset.id;
+      const pg=atPages.find(p=>p.id===id);
+      if(pg) pg.label=e.target.value;
+    });
+  });
+  atPagesEl.querySelectorAll('[data-remove]').forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      const id=e.target.dataset.remove;
+      atPages=atPages.filter(p=>p.id!==id);
+      atRenderPages();atRefreshUI();
+    });
+  });
+}
+function atAddFiles(fileList){
+  const files=Array.from(fileList).filter(f=>f.type.startsWith('image/'));
+  if(!files.length) return;
+  let loaded=0;
+  files.forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=e=>{
+      atCounter++;
+      atPages.push({id:'atp'+atCounter, src:e.target.result, label:''});
+      loaded++;
+      if(loaded===files.length){ atRenderPages();atRefreshUI(); }
+    };
+    reader.readAsDataURL(file);
+  });
+}
+atDropzone.addEventListener('click',()=>atFileInput.click());
+atFileInput.addEventListener('change',e=>atAddFiles(e.target.files));
+['dragenter','dragover'].forEach(evt=>{
+  atDropzone.addEventListener(evt,e=>{ e.preventDefault(); atDropzone.classList.add('drag'); });
+});
+['dragleave','drop'].forEach(evt=>{
+  atDropzone.addEventListener(evt,e=>{ e.preventDefault(); atDropzone.classList.remove('drag'); });
+});
+atDropzone.addEventListener('drop',e=>{
+  if(e.dataTransfer.files.length) atAddFiles(e.dataTransfer.files);
+});
+atPrintBtn.addEventListener('click',()=>{
+  document.getElementById('t7').classList.add('print-target');
+  document.body.classList.add('at-print-mode');
+  const pageStyle=document.createElement('style');
+  pageStyle.id='atPageStyle';
+  pageStyle.textContent='@page{size:A4 landscape;margin:0}';
+  document.head.appendChild(pageStyle);
+  window.print();
+  setTimeout(()=>{
+    document.getElementById('t7').classList.remove('print-target');
+    document.body.classList.remove('at-print-mode');
+    const s=document.getElementById('atPageStyle');
+    if(s) s.remove();
+  },500);
+});
+atClearBtn.addEventListener('click',()=>{
+  if(confirm('確定要清空全部已上傳的截圖嗎？')){
+    atPages=[];atRenderPages();atRefreshUI();
+  }
+});
+atRefreshUI();
+</script>
+</body>
+</html>
